@@ -1,0 +1,29 @@
+{
+  "name": "candr",
+  "version": "0.0.1",
+  "description": "Cookie and Rock website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "Michael Leonffu",
+  "license": "MIT",
+  "dependencies": {
+    "@tailwindcss/typography": "^0.4.0",
+    "gray-matter": "^4.0.2",
+    "next": "^10.0.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "remark": "^13.0.0",
+    "remark-html": "^13.0.1"
+  },
+  "devDependencies": {
+    "@types/multer": "^1.4.5",
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.8",
+    "tailwindcss": "^2.0.4"
+  }
+}
