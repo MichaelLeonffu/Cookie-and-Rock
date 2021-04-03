@@ -1,3 +1,10 @@
+---
+title: 'Front page image'
+series: 'CandR-website 003'
+author: 'Michael Leonffu'
+date: '2020-03-27'
+description: 'Making a pretty front page with svg!'
+---
 
 # CandR-website: 003 "Front page image"
 

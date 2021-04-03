@@ -22,9 +22,18 @@ export function getSortedPostsData() {
         // Use gray-matter to parse the post metadata section
         const matterResult = matter(fileContents)
 
+        const months = [
+            "Jan", "Feb", "Mar", "Apr", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+        ]
+
+        const month = months[(new Date(matterResult.data.date)).getUTCMonth()]
+        const day = (new Date(matterResult.data.date)).getUTCDate()
+
         // Combine the data with the id
         return {
             id,
+            month,
+            day,
             ...matterResult.data
         }
     })

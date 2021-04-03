@@ -2,6 +2,8 @@
 
 Cookie and Rock
 
+**Still under construction!!!**
+Check it out at [cookieandrock.dev](https://cookieandrock.dev).
 
 ## About
 

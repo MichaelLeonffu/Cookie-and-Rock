@@ -1,3 +1,10 @@
+---
+title: 'Tailwindcss and Next.js'
+series: 'CandR-website 002'
+author: 'Michael Leonffu'
+date: '2020-03-26'
+description: 'Using tailwindcss to make a pretty website and components.'
+---
 
 # CandR-website: 002 "Tailwind and Next.js"
 

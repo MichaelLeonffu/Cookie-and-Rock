@@ -1,3 +1,10 @@
+---
+title: 'Website from scratch'
+series: 'CandR-website 001'
+author: 'Michael Leonffu'
+date: '2020-03-23'
+description: 'Making a blog-website from scratch with Next.js and Markdown.'
+---
 
 # CandR-website: 001 "Website from scratch"
 
