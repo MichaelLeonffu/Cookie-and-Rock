@@ -47,11 +47,17 @@ export default function Footer({ children }) {
             <div class="mt-7 md:mt-0 flex-1 flex flex-col items-center justify-center md:items-start md:pl-5">
               <span class="">
                 © 2021
-                </span>
+              </span>
               <span class="mt-7 md:mt-1">
                 Created by&nbsp;
-                    <a class="underline hover:text-primary-gray-20" href="https://www.linkedin.com/in/crabiller/">
-                  Cookie and Rock
+                    <a class="underline hover:text-primary-gray-20" href="https://www.linkedin.com/in/michael-leonffu/">
+                  Michael Leonffu
+                    </a>
+              </span>
+              <span class="mt-7 md:mt-1">
+                Art by&nbsp;
+                    <a class="underline hover:text-primary-gray-20" href="https://www.linkedin.com/in/annawli99/">
+                  Anna Li
                     </a>
               </span>
             </div>
