@@ -1,6 +1,5 @@
 import Image from 'next/image'
-import Navbar from '../components/navbar'
-import Footer from '../components/footer'
+import Layout from '../components/layout'
 
 export async function getServerSideProps(context) {
 
@@ -13,23 +12,17 @@ export async function getServerSideProps(context) {
   ]
 
   return {
-    props: { posts, months} // will be passed to the page component as props
+    props: { posts, months } // will be passed to the page component as props
   }
 }
 
 export default function Home({ posts, months }) {
   return (
-    <div>
-      
-      {/* <head>
-        <title>Cookie and Rock!</title>
-        <link rel="icon" type="image/png" href="/favicon.png" />
-      </head> */}
-
-      <Navbar />
+    <Layout>
 
       <header className="bg-white dark:bg-gray-800">
         <div className="container px-6 py-4 mx-auto">
+          <div className="hidden md:block h-20"></div>
           <div className="items-center md:flex">
             <div className="w-full md:w-1/2">
               <div className="max-w-lg">
@@ -40,10 +33,11 @@ export default function Home({ posts, months }) {
             </div>
 
             {/* <div className="flex items-center justify-center w-full mt-6 md:mt-0 md:w-1/2"> */}
-            <div className="flex items-center justify-center w-full mt-6 md:mt-0 md:w-1/2">
-              <Image className="max-w-2xl" src="/cookieandrock-on-plate-center.png" alt="Cookie on plate" width={762} height={762}/>
+            <div className="flex items-center justify-center w-full mt-6 md:mt-0 md:w-1/2 h-96" width="762" height="762">
+              <Image className="max-w-2xl" src="/logo/cookieandrock-plated.png" alt="Cookie on plate" layout="intrinsic" width={314} height={314} />
             </div>
           </div>
+          <div className="hidden md:block h-20"></div>
         </div>
       </header>
 
@@ -82,7 +76,6 @@ export default function Home({ posts, months }) {
         </div>
       </section>
 
-      <Footer />
-    </div>
+    </Layout>
   )
 }
