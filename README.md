@@ -12,7 +12,16 @@ many smaller projects. Sometimes there are small projects that require a
 server, webserver/interface, or database; making Cookie and Rock will help
 group up all these services and projects together.
 
-Also I can make a portfolio!
+## Credits
+
+(Until I come up with a better way to add credits) I'd like to give credit to
+those who contributed.
+
+-   Michael Leonffu: Full-Stack.
+-   Yun Chiang: Co-foundered the design concept of *Cookie and Rock*.
+-   Anna Li: images/logos/icons.
+-   Astrid Leonffu: Web design.
+-   Friends: motivation, inspiration, feedback and support.
 
 ## Services/Projects
 
@@ -24,6 +33,6 @@ Eventually I would like to add something for my
  
 ## TODO
 
--   [ ] Move public data into some private CMS.
--   [ ] Move posts into private CMS as well.
+-   [x] Move public data into some private CMS.
+-   [x] Move posts into private CMS as well.
 -   [ ] Fix links and relative/absolute references.
