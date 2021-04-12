@@ -57,7 +57,7 @@ export default function Home({ posts, months }) {
                   <div className="flex-grow pl-6">
                     <h2 className="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">{seriesName.seriesName}</h2>
                     <h1 className="title-font text-xl font-medium text-gray-900 mb-3">
-                      <a href={"posts-api/" + blogid}>{title}</a>
+                      <a href={"posts/" + blogid}>{title}</a>
                     </h1>
                     <p className="leading-relaxed mb-5 mt-4 h-8">{description}</p>
                     <a className="inline-flex items-center">
