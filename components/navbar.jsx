@@ -42,14 +42,23 @@ export default function Navbar({ children }) {
               </button>
             </div>
             <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-              <div className="flex-shrink-0 flex items-center">
-                <img className="block lg:hidden h-9 w-auto" src="/logos/cookieandrock-logo.svg" alt="Cookie and Rock" />
-                <img className="hidden lg:block h-9 w-auto" src="/logos/cookieandrock-logo-white.svg" alt="Cookie and Rock" />
-              </div>
+              <a href="/" className="">
+                <div className="flex-shrink-0 flex items-center">
+                  <div className="h-9 w-9 relative">
+                    <Image objectFit="cover" layout="fill" src="/logo/cookieandrock-smooth-rock.png" alt="Cookie and Rock" />
+                  </div>
+                  {/* <img className="block lg:hidden h-9 w-auto" src="/logo/cookieandrock-smooth-rock.png" alt="Cookie and Rock" />
+                <img className="hidden lg:block h-9 w-auto" src="/logo/cookieandrock-smooth-rock.png" alt="Cookie and Rock" /> */}
+                </div>
+              </a>
+              <a href="/" className="">
+                <p className="text-white ml-0 py-2 text-md font-serif font-black block">Cookie and Rock</p>
+              </a>
               <div className="hidden sm:block sm:ml-6">
                 <div className="flex space-x-4">
                   {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
                   {/* <a href="/" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a> */}
+
 
                   <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
 
@@ -71,14 +80,13 @@ export default function Navbar({ children }) {
               </button> */}
 
               {/* <!-- Profile dropdown --> */}
-              <div className="ml-3 relative">
+              {/* <div className="ml-3 relative">
                 <div>
                   <button type="button" className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu" aria-expanded="false" aria-haspopup="true" onClick={() => setddmenu(!ddmenu)}>
                     <span className="sr-only">Open user menu</span>
-                    {/* <img className="h-8 w-8 rounded-full" src="/sky.png" alt="" /> */}
                     <img className="h-8 w-8 rounded-full" src="https://pbs.twimg.com/profile_images/1375220842745880576/rUVvwhZQ_400x400.jpg" alt="" />
                   </button>
-                </div>
+                </div> */}
 
                 {/* <!--
               Dropdown menu, show/hide based on menu state.
@@ -90,14 +98,15 @@ export default function Navbar({ children }) {
                 From: "transform opacity-100 scale-100"
                 To: "transform opacity-0 scale-95"
             --> */}
-                <div className={`${ddmenu ? ' ' : 'hidden'}`}>
-                  <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none transition ease-out duration-100 transform opacity-0 scale-95 transform opacity-100 scale-100" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
+                {/* <div className={`${ddmenu ? ' ' : 'hidden'}`}>
+                  <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none transition ease-out duration-100 transform opacity-0 scale-95" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
                     <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Your Profile</a>
                     <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Settings</a>
                     <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sign out</a>
                   </div>
                 </div>
-              </div>
+              </div> */}
+
             </div>
           </div>
         </div>
@@ -106,13 +115,17 @@ export default function Navbar({ children }) {
         <div className={`sm:hidden ${navmenu ? ' block' : 'hidden'}`} id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-            <a href="#" className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Home</a>
+            {/* <a href="/" className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Home</a> */}
 
-            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
+            <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
 
-            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+            {/* <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a> */}
 
-            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
+            <a href="https://github.com/MichaelLeonffu" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+
+            <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Photos</a>
+
+            <a href="/blogs" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Blog</a>
           </div>
         </div>
       </nav>
