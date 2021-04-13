@@ -22,7 +22,7 @@ export default function RichHeader(params) {
   const data = {
     /* defaults */
     author: "Michael Leonffu",
-    title: "Welcome to Cookie and Rock",
+    title: "Cookie and Rock",
     site_name: "Cookie and Rock",
     description: "The best place to find cookies and rocks.",
     image_url: "https://cookieandrock.dev/static/annali/test-og/cookieandrock-logo-text.png",
@@ -35,7 +35,8 @@ export default function RichHeader(params) {
   return (
     <Head>
       <title>{data.title}</title>
-      <meta property="author" content={data.author} key="author" />
+      <meta name="author" content={data.author} key="name_author" />
+      <meta name="description" content={data.description} key="name_description" />
       <link rel="icon" type="image/png" href="/favicon.ico" key="favicon" />
 
       {/* Fixed */}
@@ -45,7 +46,7 @@ export default function RichHeader(params) {
       {/* discord large image embed */}
       <meta property="og:title" content={data.title} key="title" />
       <meta property="og:site_name" content={data.site_name} key="site_name" />
-      <meta property="og:description" content={data.description} key="description" />
+      <meta property="og:description" content={data.description} key="og_description" />
       <meta property="og:image" content={data.image_url} key="image" />
       <meta name="theme-color" content={data.theme_color} key="theme-color" />
       <meta name="twitter:card" content="summary_large_image" key="misc-card" />
