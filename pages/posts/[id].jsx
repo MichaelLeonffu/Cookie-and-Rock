@@ -1,4 +1,5 @@
 import Navbar from '../../components/navbar'
+import RichHeader from '../../components/richheader'
 import Footer from '../../components/footer'
 
 import remark from 'remark'
@@ -10,7 +11,21 @@ export async function getServerSideProps(context) {
     debugger;
     const res = await fetch('http://localhost:1337/blogs?blogid_eq=' + context.params.id)
 
-    const postData = (await res.json())[0]
+    /* Set defaults in case the data isn't complete */
+    const postData = {
+        title: "Untitled",
+        author: "Anonymous",
+        description: "The empty blog.",
+        content: "Missing Blog? [home](/)",
+        publishDate: "2020-03-30",
+        coverPhoto: {
+            url: "/logo/cookieandrock-plated-empty.png"
+        },
+
+        ...(await res.json())[0]
+    }
+
+    // const postData = (await res.json())[0]
 
     const processedContent = await remark()
         .use(html)
@@ -42,10 +57,12 @@ export default function Post({ postData, contentHtml }) {
         <>
             <Navbar />
 
-            <header class="header relative fl fl-center fl-column w-full z-index-10 m-b-10 p-20 h-360">
-                <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500" />
-                <div class="absolute top-0 left-0 w-full h-full bg-opacity-40" />
-                <p class="relative text-white text-center text-7xl max-w-screen-md mx-auto">{postData.title}</p>
+            <RichHeader site_name="Cookie and Rock -- blogs" title={postData.title} description={postData.description} image_url={postData.coverPhoto.url} author={postData.author} og_type="article" />
+
+            <header className="header relative fl fl-center fl-column w-full z-index-10 m-b-10 p-20 h-360">
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500" />
+                <div className="absolute top-0 left-0 w-full h-full bg-opacity-40" />
+                <p className="relative text-white text-center text-7xl max-w-screen-md mx-auto">{postData.title}</p>
             </header>
 
             <div className="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0">
