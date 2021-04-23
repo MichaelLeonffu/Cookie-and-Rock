@@ -14,7 +14,9 @@ export async function getServerSideProps(context) {
     /* Set defaults in case the data isn't complete */
     const postData = {
         title: "Untitled",
-        author: "Anonymous",
+        author: {
+            name: "C&R Staff"
+        },
         description: "The empty blog.",
         content: "Missing Blog? [home](/)",
         publishDate: "2020-03-30",
@@ -57,7 +59,7 @@ export default function Post({ postData, contentHtml }) {
         <>
             <Navbar />
 
-            <RichHeader site_name="Cookie and Rock -- blogs" title={postData.title} description={postData.description} image_url={postData.coverPhoto.url} author={postData.author} og_type="article" />
+            <RichHeader site_name="Cookie and Rock -- blogs" title={postData.title} description={postData.description} image_url={postData.coverPhoto.url} author={postData.author.name} og_type="article" />
 
             <header className="header relative fl fl-center fl-column w-full z-index-10 m-b-10 p-20 h-360">
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500" />
@@ -72,10 +74,21 @@ export default function Post({ postData, contentHtml }) {
                     <dl className="space-y-10">
                         <div>
                             <dt className="sr-only">Published on</dt>
-                            <dd className="text-base leading-6 font-medium text-gray-500"><time dateTime="2021-03-29T19:00:00.000Z">{format_date(postData.publishDate)}</time>
+                            <dd className="text-base leading-6 font-medium text-gray-500">
+                                <time dateTime={postData.publishDate}>{format_date(postData.publishDate)}</time>
                             </dd>
                         </div>
                     </dl>
+
+                    <dl className="space-y-10">
+                        <div>
+                            <dt className="sr-only">Author</dt>
+                            <dd className="text-base leading-6 font-medium text-gray-500">
+                                By {postData.author.name}
+                            </dd>
+                        </div>
+                    </dl>
+
                     {/* <div>
                         <h1 className="text-3xl leading-9 font-extrabold text-gray-900 tracking-tight sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">{postData.title}</h1>
                     </div> */}

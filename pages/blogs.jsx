@@ -97,10 +97,10 @@ export default function Home({ posts_by_series, months }) {
                     </p>
 
                     <a className="absolute bottom-10 h-12 w-auto inline-flex items-center">
-                      <img alt="blog" src="https://pbs.twimg.com/profile_images/1375220842745880576/rUVvwhZQ_400x400.jpg" className="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center" />
+                      <img alt="blog" src={author ? author.profileImage.url : "/favicon.ico"} className="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center" />
                       <span className="flex-grow flex flex-col pl-3">
                         <span className="title-font font-medium text-gray-900">
-                          {"author"}
+                          {author ? author.name : "C&R Staff"}
                         </span>
                       </span>
                     </a>
