@@ -70,7 +70,7 @@ export default function Home({ posts_by_series, months }) {
 
             <div className="h-auto w-full flex flex-row flex-wrap justify-between items-start pt-8 px-2 text-gray-600 body-font">
               {posts.map(({ id, blogid, publishDate, title, seriesName, author, description }) => (
-                <div className="flex-shrink-0 w-full md:w-72 h-72 flex flex-row p-6 pt-0 mx-0">
+                <div className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 h-72 flex flex-row p-6 pt-0 mx-0">
 
                   <div className="flex-shrink-0 mr-6">
                     <div className="w-full flex flex-col text-center leading-none">
@@ -96,7 +96,7 @@ export default function Home({ posts_by_series, months }) {
                       {description}
                     </p>
 
-                    <a className="absolute bottom-10 h-12 w-full inline-flex items-center">
+                    <a className="absolute bottom-10 h-12 w-auto inline-flex items-center">
                       <img alt="blog" src="https://pbs.twimg.com/profile_images/1375220842745880576/rUVvwhZQ_400x400.jpg" className="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center" />
                       <span className="flex-grow flex flex-col pl-3">
                         <span className="title-font font-medium text-gray-900">
