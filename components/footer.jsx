@@ -10,11 +10,11 @@ export default function Footer({ children }) {
           </div>
           <div className="mt-4 md:mt-0 flex flex-col md:flex-row">
             <nav className="flex-1 flex flex-col items-center justify-center md:items-end md:border-r border-gray-100 md:pr-5">
-              <a aria-current="page" href="#" className="hover:text-gray-700 dark:hover:text-white">
-                Components
+              <a aria-current="page" href="/about" className="hover:text-gray-700 dark:hover:text-white">
+                About us
                 </a>
               <a aria-current="page" href="#" className="hover:text-gray-700 dark:hover:text-white">
-                Contacts
+                Roadmap
                 </a>
               <a aria-current="page" href="#" className="hover:text-gray-700 dark:hover:text-white">
                 Customization
