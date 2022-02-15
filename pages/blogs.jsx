@@ -17,16 +17,12 @@ export async function getServerSideProps(context) {
 
   let series_names = [... new Set(Array.from(posts, x => x.seriesName.seriesName))]
 
-  // console.log(series_names)
-
   let posts_by_series = Array.from(
     series_names, x => ({
       seriesName: x,
       posts: posts.filter((v, i, a) => v.seriesName.seriesName == x)
     })
   )
-
-  // console.log(posts_by_series)
 
   return {
     props: { posts_by_series, months } // will be passed to the page component as props
@@ -41,20 +37,29 @@ export default function Home({ posts_by_series, months }) {
 
       <Navbar />
 
-      {/* <header class="header relative fl fl-center fl-column w-full z-index-10 m-b-10 p-20 h-screen">
-        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500">
-          <p class="relative text-white text-center text-7xl max-w-screen-md mx-auto font-serif mt-16">Coming Soon!</p>
-          <div class="relative grid justify-items-center mx-auto" >
+      {/* <header className="header relative fl fl-center fl-column w-full z-index-10 m-b-10 p-20 h-screen">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500">
+          <p className="relative text-white text-center text-7xl max-w-screen-md mx-auto font-serif mt-16">Coming Soon!</p>
+          <div className="relative grid justify-items-center mx-auto" >
             <Image src="/logo/cookieandrock-plated.png" alt="Cookie on plate" layout="intrinsic" width={512} height={512} />
           </div>
         </div>
       </header> */}
 
-      <header class="header relative fl fl-center fl-column w-full mb-3 p-20 h-auto">
-        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500" />
-        <p class="relative text-white text-center text-7xl max-w-screen-md mx-auto font-serif my-9">Blogs</p>
+      <header className="header relative fl fl-center fl-column w-full mb-3 p-20 h-auto">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500" />
+        <p className="relative text-white text-center text-7xl max-w-screen-md mx-auto font-serif my-9">Blogs</p>
       </header>
 
+      {/* Quote by Alex B */}
+      <section className="w-full md:w-3/4 mx-auto mt-16">
+        <p className="text-center text-gray-800 text-xl">
+          Cookie and Rock was created by a small group of friends as a platform for them to share their passions with the world. Without a central topic or theme, authors are encouraged to write about any whim they have.
+          <br />
+          <br />
+          We promise you, the reader, one thing: uninterrupted clear thought without any of the smoke and mirrors you'd find on most online journals or blogs.
+        </p>
+      </section>
 
       <section className="w-full md:w-3/4 mx-auto mt-24">
 
